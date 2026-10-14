@@ -27,11 +27,11 @@ public class BossTest {
         assertFalse(Boss.isValidBoss("Jane")); // missing last name
         assertFalse(Boss.isValidBoss("Jane2 Smith")); // digits not allowed
         assertFalse(Boss.isValidBoss("Jane-Smith")); // special character not allowed
+        assertFalse(Boss.isValidBoss("Jane Mary Smith")); // middle names not allowed
 
         // valid boss names
         assertTrue(Boss.isValidBoss("")); // optional boss
         assertTrue(Boss.isValidBoss("Jane Smith"));
-        assertTrue(Boss.isValidBoss("Jane Mary Smith"));
     }
 
     @Test
